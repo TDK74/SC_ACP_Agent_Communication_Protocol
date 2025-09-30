@@ -11,7 +11,7 @@ nest_asyncio.apply()
 
 ## ------------------------------------------------------##
 url = os.environ.get('DLAI_LOCAL_URL').format(port =  8888)
-IFrame(f"{url}terminals/1", width = 800, height= 600)
+IFrame(f"{url}terminals/1", width = 800, height = 600)
 
 ## ------------------------------------------------------##
 async def example() -> None:
@@ -24,3 +24,4 @@ async def example() -> None:
 
 ## ------------------------------------------------------##
 asyncio.run(example())
+
