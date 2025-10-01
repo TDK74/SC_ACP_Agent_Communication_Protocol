@@ -29,7 +29,7 @@ async def health_agent(input: list[Message],
     health and hospital treatments.
     """
 
-    agent = CodeAgent(tools=[DuckDuckGoSearchTool(), VisitWebpageTool()], model = model)
+    agent = CodeAgent(tools = [DuckDuckGoSearchTool(), VisitWebpageTool()], model = model)
 
     prompt = input[0].parts[0].content
     response = agent.run(prompt)
