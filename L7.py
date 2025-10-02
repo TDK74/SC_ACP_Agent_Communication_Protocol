@@ -23,8 +23,8 @@ async def run_hospital_workflow() -> None:
                 Client(base_url = "http://localhost:8000") as hospital):
         run1 = await hospital.run_sync(
                                     agent = "health_agent",
-                                    input = "Do I need rehabilitation after "
-                                            "a shoulder reconstruction?"
+                                    input = ("Do I need rehabilitation after "
+                                             "a shoulder reconstruction?")
                                     )
 
         content = run1.output[0].parts[0].content
@@ -32,11 +32,12 @@ async def run_hospital_workflow() -> None:
 
         run2 = await insurer.run_sync(
                                     agent = "policy_agent",
-                                    input = f"Context: {content} What is the waiting "
-                                            f"period for rehabilitation?"
+                                    input = (f"Context: {content} What is the waiting "
+                                             f"period for rehabilitation?")
                                     )
 
         print(Fore.YELLOW + run2.output[0].parts[0].content + Fore.RESET)
 
 ## ------------------------------------------------------##
 asyncio.run(run_hospital_workflow())
+
