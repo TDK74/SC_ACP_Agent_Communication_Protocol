@@ -47,8 +47,8 @@ async def policy_agent(input: list[Message]) -> AsyncGenerator[RunYield, RunYiel
     insurance_agent = Agent(
                             role = "Senior Insurance Coverage Assistant",
                             goal = "Determine whether something is covered or not",
-                            backstory = "You are an expert insurance agent designed to \
-                                        assist with coverage queries",
+                            backstory = ("You are an expert insurance agent designed to "
+                                        "assist with coverage queries"),
                             verbose = True,
                             allow_delegation = False,
                             llm = llm,
@@ -74,3 +74,4 @@ if __name__ == "__main__":
 ## ------------------------------------------------------##
 url = os.environ.get('DLAI_LOCAL_URL').format(port = 8888)
 IFrame(f"{url}terminals/1", width = 800, height = 600)
+
