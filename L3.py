@@ -37,8 +37,8 @@ rag_tool    # print()
 insurance_agent = Agent(
                         role = "Senior Insurance Coverage Assistant",
                         goal = "Determine whether something is covered or not",
-                        backstory = "You are an expert insurance agent designed \
-                                    to assist with coverage queries",
+                        backstory = ("You are an expert insurance agent designed "
+                                    "to assist with coverage queries"),
                         verbose = True,
                         allow_delegation = False,
                         llm = llm,
@@ -57,3 +57,4 @@ task1 = Task(
 crew = Crew(agents = [insurance_agent], tasks = [task1], verbose = True)
 task_output = crew.kickoff()
 print(task_output)
+
