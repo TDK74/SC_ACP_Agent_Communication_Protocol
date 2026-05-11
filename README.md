@@ -1,9 +1,9 @@
 # Short Course: ACP Agent Communication Protocol
 
 ### Acknowledgments
-The Python code is from the short course "ACP: Agent Communication Protocol" on the DeepLearning.AI platform, available for free.  
+The Python code is from the short course "ACP: Agent Communication Protocol" on the DeepLearning.AI platform. The course content is available for free, while the certificate and graded assessments require a paid subscription.  
 For more details, visit:  
-<https://www.deeplearning.ai/short-courses/acp-agent-communication-protocol/>
+<https://learn.deeplearning.ai/courses/a2a-the-agent2agent-protocol/information>
 
 ### Description
 This repository contains only Python code from my practice after each lesson.  
